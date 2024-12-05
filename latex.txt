@@ -1,0 +1,1878 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+
+\usepackage{titlesec}
+\makeatletter
+\renewcommand\thesubsection{\@arabic\c@section.\@arabic\c@subsection}
+\makeatother
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\author{}
+\date{}
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\huge
+\textbf{Understanding Artificial Intelligence: \protect\\
+Past, Present \& Future}
+
+\vspace{10mm}
+
+\begin{quote}
+\large
+\centering
+SEMINAR AND REPORT WRITING FOR ENGINEERS
+
+\vspace{6mm}
+
+SUBMITTED IN PARTIAL FULFILMENT OF THE REQUIREMENTS FOR THE AWARD OF THE
+DEGREE OF
+\end{quote}
+
+\vspace{5mm}
+
+\Large
+\textbf{
+{BACHELOR OF TECHNOLOGY}
+}
+\vspace{5mm}
+\\
+\textbf{
+(Computer Science and
+Engineering)
+}
+\vspace{5mm}
+\begin{figure}
+\centering
+\includegraphics[height=5cm]{../strw/image1.png}
+\end{figure}
+\end{center}
+
+\date{\today}
+\vspace{3 mm}
+
+
+Submitted By\hfill Submitted To\\
+Bhumi\hfill Prof. Satinderpal Singh\\
+URN 2302531\hfill\\
+\vspace{2mm}
+
+\begin{center}
+\textbf{Department of Computer Science and
+Engineering}
+\\
+\textbf{Guru Nanak Dev Engineering
+College}
+\\
+\textbf{Ludhiana, 141006}
+\end{center}
+\end{titlepage}
+
+\newpage
+\pagenumbering{roman}
+\begin{quote}
+\begin{center}
+\LARGE
+\textbf{Abstract}
+\end{center}
+\end{quote}
+
+\vspace{2cm}
+
+This report, titled "Understanding Artificial Intelligence: Past,
+Present \& Future," embarks on a comprehensive exploration of the
+dynamic landscape of artificial intelligence, uncovering the trends that
+are shaping our technological future.
+
+Categorized within the domain of research-based analysis and technology
+exploration, this endeavor delves into the heart of AI\textquotesingle s
+evolution, revealing its transformative potential and the paths it
+paves. This report delves into the historical evolution of AI, its
+present-day applications across diverse industries, and the exciting
+prospects it holds for the future.
+
+Artificial Intelligence (AI) has profound impacts across industries,
+societies, and personal experiences. AI\textquotesingle s reach extends
+from healthcare diagnostics that save lives to predictive algorithms
+optimizing financial decisions. This report aims to decipher intricate
+threads that weave the fabric of AI trends, enabling us to predict their
+trajectories. By scrutinizing emerging patterns, it provides insights
+into the potential challenges and opportunities that lie ahead,
+equipping both the authors and readers with a deeper understanding of
+AI\textquotesingle s evolving landscape.
+
+As we navigate through the historical milestones that have shaped AI, we
+unravel its contemporary applications, internal workings, and emerging
+trends. This exploration extends to ethical considerations, social
+implications, and future considerations in AI, emphasizing the
+importance of responsible AI development, transparency, and
+international collaboration.
+
+AI\textquotesingle s transformative role transcends mere technology; it
+orchestrates innovation across industries, enhancing precision in
+healthcare diagnoses, revolutionizing manufacturing processes, and
+fostering change that shapes our technological future. While the
+analysis casts a wide net over AI trends, it is essential to delineate
+its scope, focusing on emerging trends and their implications, while
+acknowledging that AI\textquotesingle s complexity offers a boundless
+canvas for exploration.
+
+Within the current AI landscape, milestones reached and advancements
+made are acknowledged. Concurrently, the report sets forth to analyze
+and predict AI trends---a proactive methodology that enables us to
+understand its evolutionary trajectory. This report serves as an
+insightful resource for those navigating the dynamic AI landscape,
+offering a glimpse into the transformative potential of artificial
+intelligence and the future it promises to create.
+\newpage
+
+\begin{quote}
+\begin{center}
+\LARGE
+\textbf{Acknowledgements}
+\end{center}
+\end{quote}
+
+\vspace{2cm}
+
+I am highly grateful to Dr. Sehajpal Singh, Guru Nanak Dev Engineering
+College (GNDEC), Ludhiana, for providing this opportunity to carry out
+the major project work on ``Understanding Artificial Intelligence: Past,
+Present and Future''.
+
+The constant guidance and encouragement received from Dr. Kiran Jyoti
+H.O.D. CSE Department, GNDEC Ludhiana has been of great help in carrying
+out the project work and is acknowledged with reverential thanks.
+
+I would like to express a deep sense of gratitude and thanks profusely
+to Prof.  Satinderpal singh, without his wise counsel and able guidance, it
+would have been impossible to complete the project in this manner.
+
+I express gratitude to other faculty members of computer science and
+engineering department of GNDEC for their intellectual support
+throughout the course of this work.
+
+Finally, I am indebted to all whosoever have contributed in this report
+work.
+
+\vspace{2.5cm}
+
+Bhumi
+\newpage
+
+\begin{center}
+\LARGE
+\textbf{List of Figures}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{figure}
+\centering
+\doublespacing
+Fig 1: Artificial Intelligence is the Future of Growth\dotfill...3 \\
+
+Fig 2: Branches of AI\dotfill...5 \\
+
+Fig 3: Share of Job needing AI Skills\dotfill...7 \\
+
+Fig 4: AI in Healthcare Application Market Share\dotfill...8 \\
+
+Fig 5: AI plans by Small Businesses\dotfill...9 \\
+
+Fig 6: Personalized Content Recommendations by AI\dotfill...10 \\
+
+Fig 7: AI use by Experienced Organizations\dotfill...10 \\
+
+Fig 8: How Smartphone Users Benefit From AI\dotfill...12 \\
+
+Fig 9: Problems Faced by People in using AI\dotfill...13 \\
+
+Fig 10: Societal Implications of AI\dotfill...14 \\
+
+Fig 11: Responsibility for AI\dotfill...15 \\
+
+Fig 12: Self Driving Cars\dotfill...16 \\
+
+Fig 13: Top 5 Industries Affected by AI\dotfill...17 \\
+
+Fig 14: AI revenue by Region\dotfill...20 \\
+
+Fig 15: AI hiring by Countries\dotfill...20 \\
+
+Fig 16: AI Estimated Market Size\dotfill...22 \\
+
+
+
+\end{figure}
+\newpage
+
+\begin{center}
+\LARGE
+\textbf{List of Tables}
+\end{center}
+
+\vspace{0.5cm}
+
+\begin{quote}
+\centering
+\doublespacing    
+Table 1: Year \& Milestone in AI
+\ldots\dotfill...6
+
+Table 2: AI
+Applications\ldots\dotfill...7
+
+Table 3: Benefits of AI
+Applications\ldots\dotfill...11
+
+Table 4: Internal Components of Neural
+Networks\ldots\dotfill...18
+
+Table 5: Emerging Trends in
+AI\ldots\dotfill...19
+
+\end{quote}
+
+
+\newpage
+\begin{center}
+\Large
+\textbf{Contents}
+\end{center}
+
+\vspace{0.2cm}
+
+\textbf{Title Page}
+
+\textbf{Abstract\dotfill i}
+
+\textbf{Acknowledgement\dotfill ii}
+
+\textbf{List of Figures\dotfill iii}
+
+\textbf{List of Tables\dotfill iv}
+
+\textbf{Contents\dotfill v}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+\subsection{Introduction\dotfill1}
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    Introduction to AI Trends
+    Analysis\dotfill1
+  \item
+    Project Category
+    \ldots\dotfill1
+  \item
+    Significance of AI in Today's
+    World\dotfill1
+  \item
+    Objectives\dotfill2
+  \item
+    Problem Formulation \ldots\ldots\dotfill2
+  \item
+    Identification/ Recognition of
+    need\ldots\dotfill2
+  \item
+    Structure of the
+    Report\ldots\ldots\ldots\dotfill2
+  \item
+    AI's Role in Shaping the
+    Future\ldots\ldots\dotfill3
+  \item
+    Scope and
+    Limitations\ldots\ldots\ldots\ldots\ldots\ldots\dotfill3
+  \item
+    Existing and Proposed
+    System\ldots\ldots\ldots\dotfill3
+  \end{enumerate}
+
+\item
+\subsection{Current AI Landscape \& Historical Evolution \dotfill4}
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    Defining
+    AI\dotfill4
+  \item
+    Evolution of
+    AI\dotfill4
+  \item
+    AI Today: Branches and
+    Technologies\dotfill5
+  \item
+    Notable Milestones in
+    AI\dotfill6
+  \end{enumerate}
+  
+\item
+\subsection{Applications of AI\dotfill7}
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    Healthcare and Medical
+    Applications\dotfill8
+  \item
+    Finance and Business
+    Applications\dotfill9
+  \item
+    Entertainment and Creative
+    Field\dotfill10
+  \item
+    Impacts and Benefits of AI
+    Applications\dotfill11
+    
+  \end{enumerate}
+  
+\item 
+\subsection{Ethical, Social and Future Considerations in AI\dotfill13}
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    Ethical Challenges in AI
+    Development\dotfill13
+  \item
+    Algorithmic Bias, Fairness and
+    Transparency\dotfill14
+  \item
+    Privacy, Data Security and Social
+    Implications...\dotfill14
+  \item
+    Progression Towards Artificial General Intelligence
+    (AGI)\dotfill15
+  \item
+    Future Directions and Open Questions
+    \dotfill15
+    
+  \end{enumerate}
+  
+\item
+\subsection{AI in Research, Industry and Internal Workings\dotfill16}
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    Case Studies in AI
+    Research\dotfill16
+  \item
+    AI Transforming
+    Industries\dotfill17
+  \item
+    Understanding AI's Internal Workings\dotfill18
+  \item
+    Advancement in Financial Technology
+    \dotfill18
+  \item
+    Emerging Trends in
+    AI\dotfill19
+    
+  \end{enumerate}
+  
+\item
+\subsection{Conclusion and Future Scope\dotfill21}
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \item
+    Conclusion\dotfill21
+  \item
+    Future
+    Scope\dotfill21
+  \item
+    Summary of Key
+    Findings\dotfill22
+  \end{enumerate}
+\end{enumerate}
+
+\textbf{References \dotfill23}
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\begin{center}
+\huge
+\textbf{Chapter 1: Introduction}
+\rule{\textwidth}{0.5mm}
+ \vspace{1mm}
+\end{center}
+\vspace{1cm}
+
+  \begin{center}
+\LARGE
+\raggedright
+\textbf{1.1 Introduction to AI Trend Analysis}
+\end{center}
+
+Welcome to the insightful journey into the realm of AI technology---the
+"Analysis of Growing Trends in AI Technology." In this report, we embark
+on a comprehensive exploration of the dynamic landscape of artificial
+intelligence, uncovering the trends that are shaping our technological
+future.
+\vspace{1cm}
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{1.2 Project Category}
+\end{center}
+
+Categorizing the essence of our endeavor, our project falls within the
+domain of research-based analysis and technology exploration. We delve
+into the heart of AI\textquotesingle s evolution, unraveling its
+transformative potential and prognosticating the paths it paves.
+
+\vspace{1cm}
+
+\begin{center}
+\LARGE
+\raggedright
+ \textbf{1.3 Significance of AI in Today\textquotesingle s World}
+\end{center}
+
+As we stand at the intersection of technology and innovation, the
+profound impact of artificial intelligence reverberates across
+industries, societies, and personal experiences. AI is no longer a
+distant vision: it\textquotesingle s a tangible force driving
+efficiency, personalization, and innovation across sectors. From
+healthcare diagnostics that save lives to predictive algorithms
+optimizing financial decisions, AI\textquotesingle s reach is profound.
+
+
+\newpage
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{1.4 Objectives}
+\end{center}
+
+Our objectives in this report are multifold. We aspire to decipher the
+intricate threads that weave the fabric of AI trends, enabling us to
+predict their trajectories. By scrutinizing emerging patterns, we gain
+insights into the potential challenges and opportunities that lie ahead.
+Ultimately, our aim is to equip ourselves and the reader with a deeper
+understanding of AI\textquotesingle s evolving landscape.
+
+\vspace{1cm}
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{1.5 Problem Formulation}
+\end{center}
+
+In the rapid cadence of technological evolution, the challenge emerges:
+How do we remain attuned to the ever-evolving dance of AI trends? The
+fluidity of technology makes it imperative to anticipate its trajectory.
+This analysis addresses this challenge by providing a framework to
+discern the trends shaping AI\textquotesingle s development.
+
+\vspace{1cm}
+
+\begin{center}    
+\LARGE
+\raggedright
+\textbf{1.6 Identification/Recognition of Need}
+\end{center}
+
+The need to explore AI trends is undeniable. As AI becomes an integral
+part of our lives, understanding its emerging trends becomes essential.
+The realms of healthcare, finance, and even creative expression are
+undergoing transformative changes. By recognizing these trends, we align
+ourselves with the tide of progress.
+
+\vspace{1cm}
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{1.7 Structure of the Report}
+\end{center}
+
+This report unfolds as a guided voyage through the AI trends landscape.
+Each subsequent chapter unveils a facet of this vast terrain,
+progressively building a holistic understanding of AI\textquotesingle s
+dynamic trajectory.
+
+\newpage
+\begin{center}
+\LARGE
+\raggedright
+\textbf{1.8 AI\textquotesingle s Role in Shaping the Future}
+\end{center}
+
+AI\textquotesingle s
+transformative role transcends mere technology---it orchestrates
+innovation across industries. From enhancing precision in healthcare
+diagnoses to revolutionizing manufacturing processes, AI fosters change
+that shapes our technological future.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth,height=5in]{../strw/image2.jpg}
+
+\begin{quote}
+\centering
+\textbf{Fig 1: Artificial Intelligence is the Future of Growth}
+\end{quote}
+
+\end{figure}
+
+\vspace{1cm}
+\begin{center}
+\LARGE
+\raggedright
+\textbf{1.9 Scope and Limitations}
+\end{center}
+
+While our analysis casts a wide net over AI trends, it is important to
+delineate our scope. We focus on emerging trends and their implications,
+while acknowledging that AI\textquotesingle s complexity offers a
+boundless canvas for exploration.
+
+\vspace{1cm}
+\begin{center}
+\LARGE
+\raggedright
+\textbf{1.10 Existing and Proposed System}
+\end{center}
+
+Within the current AI landscape, we acknowledge milestones reached and
+advancements made. Concurrently, we set forth to analyze and predict AI
+trends---a proactive methodology that enables us to understand its
+evolutionary trajectory.
+
+\newpage
+
+\begin{center}
+\LARGE
+\textbf{Chapter 2: Current AI Landscape and Historical Evolution}
+\rule{\textwidth}{0.5mm}
+ \vspace{1mm}
+\end{center}
+
+\vspace{0.8cm}
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{2.1 Defining Artificial Intelligence:}
+\end{center}
+
+Artificial Intelligence (AI) stands as a field of computer science that
+seeks to imbue machines with capabilities traditionally associated with
+human intelligence. At its core, AI involves the development of
+algorithms and systems that can learn, reason, and solve problems,
+simulating cognitive functions.
+
+\vspace{0.4cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{2.1.1 Conceptualizing AI: Intelligent Agents}
+\end{center}
+
+AI encompasses a spectrum of concepts, from the creation of intelligent
+agents capable of making decisions to the contemporary paradigm of
+machine learning. Intelligent agents mimic human decision-making
+processes, while machine learning leverages data and algorithms to
+enable systems to improve their performance through experience.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{2.1.2 Core Principles of AI: Learning, Reasoning, Solving}
+\end{center}
+
+Central to AI are the principles of learning, reasoning, and problem
+solving. Learning mechanisms enable systems to adapt and improve based
+on experience, reasoning allows machines to draw conclusions from
+information, and problem solving equips them to navigate complex
+scenarios.
+
+\vspace{0.8cm}
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{2.2 Evolution of AI:}
+\end{center}
+
+The evolution of AI spans decades, marked by periods of breakthroughs
+and challenges, shaping the field into what it is today.
+
+\vspace{0.4cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{2.2.1 Early Origins: Foundations and Visionaries}
+\end{center}
+
+AI\textquotesingle s roots trace back to the mid-20th century, with
+pioneers like Alan Turing laying the groundwork for machine
+intelligence. The Turing Test, proposed in 1950, became a benchmark for
+gauging a machine\textquotesingle s ability to exhibit human-like
+intelligence.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{2.2.2 Modern AI: }
+\end{center}
+
+The advent of machine learning in the late 20th century marked a
+transformative phase. Neural networks gained prominence, becoming the
+basis for deep learning---a subfield that propelled AI\textquotesingle s
+capabilities in image recognition, natural language processing, and
+more.
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{2.3
+AI Today: Branches and Technologies}
+\end{center}
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth,height=3in]
+{../strw/image3.png}
+\end{figure}
+
+\begin{quote}
+\begin{center}
+\textbf{Fig 2: Branches of AI}
+\end{center}
+\end{quote}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{2.3.1 Machine Learning Paradigms}
+\end{center}
+
+Machine learning comprises diverse paradigms. Supervised learning
+involves training models on labeled data, unsupervised learning uncovers
+patterns in unlabeled data, and reinforcement learning uses reward-based
+mechanisms for decision making.
+
+\vspace{0.2cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{2.3.2 Natural Language Processing and Understanding}
+\end{center}
+
+Natural language processing (NLP) empowers machines to comprehend and
+generate human language. Its Applications include language translation
+and chatbots.
+
+\vspace{0.2cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{2.3.3 Computer Vision and Image Recognition}
+\end{center}
+
+Computer vision enables machines to interpret visual information,
+revolutionizing sectors like healthcare (medical imaging) and autonomous
+vehicles.
+
+\vspace{0.2cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{2.3.4 Robotics and Embodied AI}
+\end{center}
+
+AI\textquotesingle s extension in robotics creates intelligent machines
+that interact with the physical world. From manufacturing to space
+exploration, robotics pushes boundaries.
+
+
+
+\begin{center}
+\Large
+\raggedright
+\textbf{2.4 Notable Milestones in AI:}
+\end{center}
+
+\begin{quote}
+\centering
+\textbf{Table 1: Year \& Milestone in AI}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Year \textbar{} Milestone}
+\end{minipage} \\
+\midrule()
+\endhead
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\textbar-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/- \\
+1943 \textbar{} McCulloch and Pitts propose artificial neurons \\
+1950 \textbar{} Alan Turing\textquotesingle s "Computing Machinery and
+Intelligence" \\
+1956 \textbar{} Dartmouth Workshop: Birth of AI as a field \\
+1956 \textbar{} John McCarthy coins the term "Artificial
+Intelligence" \\
+1957 \textbar{} The first AI program, Logic Theorist, developed \\
+1967 \textbar{} Dendral: The first expert system \\
+1970s \textbar{} AI experiences the "AI Winter" \\
+1980s \textbar{} Expert Systems gain popularity \\
+1997 \textbar{} IBM\textquotesingle s Deep Blue defeats Garry Kasparov
+in chess \\
+2000s \textbar{} Rise of Machine Learning and Neural Networks \\
+2011  \textbar{} IBM\textquotesingle s Watson wins Jeopardy! \\
+2012 \textbar{} Deep Learning revolution begins \\
+2015 \textbar{} AlphaGo defeats world Go champion \\
+2023 \textbar{} AI applied in almost every Industry using
+Technology \\
+\bottomrule()
+\end{longtable}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{2.4.1 Turing Test and Early AI Philosophy}
+\end{center}
+
+Alan Turing\textquotesingle s Turing Test proposed a criterion to assess
+machine intelligence, laying the groundwork for AI\textquotesingle s
+development. Philosophical debates about machine consciousness followed.
+
+\vspace{0.2cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{2.4.2 Expert Systems and Rule-Based AI}
+\end{center}
+
+The era of expert systems saw AI applied to specific domains, utilizing
+rule-based systems to replicate human expertise.
+
+\vspace{0.2cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{2.4.3 Neural Networks and Deep Learning Revolution}
+\end{center}
+
+The resurgence of neural networks in the 21st century brought forth the
+deep learning revolution, enabling breakthroughs in image recognition,
+language processing etc.
+
+\vspace{0.2cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{2.4.4 AI in Gaming, Chess, and Go: \\ Human-AI Competition}
+\end{center}
+
+AI demonstrated prowess in gaming, notably defeating human champions in
+chess and, more recently, the ancient game of Go.
+
+\newpage
+
+\begin{center}
+\LARGE
+\textbf{Chapter
+3: Applications of AI}
+\rule{\textwidth}{0.5mm}
+ \vspace{1mm}
+\end{center}
+
+\includegraphics[width=\textwidth,height=4.89444in]{../strw/image4.jpg}
+
+\begin{quote}
+\centering 
+\textbf{Fig 3: Share of Job Needing AI Skills}
+\end{quote}
+
+\vspace{0.7cm}
+
+\begin{center}
+\textbf{Table 2: AI Applications}
+\end{center}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.1927}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.8073}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Industry}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{AI Applications}
+\end{minipage} \\
+\midrule()
+\endhead
+Healthcare & Predictive healthcare analytics, surgical robotics,
+personalized medicine \\
+Finance & Algorithmic trading, fraud detection, customer service
+chatbots \\
+Agriculture & Precision farming, crop management \\
+Entertainment & AI-generated art, music and film recommendation, video
+game AI \\
+\bottomrule()
+\end{longtable}
+
+\newpage
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.1
+Healthcare and Medical Applications}
+\end{center}
+
+\vspace{0.4cm}
+
+\includegraphics[width=\textwidth,height=4.5in]{../strw/image5.jpg}
+
+\begin{quote}
+\centering
+\textbf{Fig 4: AI in Healthcare Application Market Share}
+\end{quote}
+
+\vspace{0.4cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.1.1 Early Disease Detection \& Providing Treatment Plans}
+\end{center}
+
+AI-driven predictive analytics analyze patient data to identify early
+signs of diseases, by recognizing patterns. AI analyzes genetic data to
+predict how patients will respond to treatments. This individualized
+approach enhances treatment effectiveness and minimizes adverse effects.
+
+\vspace{0.4cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.1.2 Drug Discovery and Development: \\ Accelerating Research}
+\end{center}
+
+AI expedites drug discovery by predicting molecular properties and
+identifying promising compounds. This innovation streamlines research,
+saving time and resources.
+
+\vspace{0.4cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.1.3 Surgical Robotics: \\ Precision and Minimally Invasive
+Procedures}
+\end{center}
+
+AI-powered robotic surgeries enhance precision and visualization.
+Minimally invasive procedures result in faster recovery and improved
+surgical outcomes.
+
+\newpage
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{3.2 Finance and Business Applications}
+\end{center}
+
+\vspace{0.6cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.2.1 Algorithmic Trading: Investment Strategies}
+\end{center}
+
+AI-powered algorithms analyze market trends for informed trading
+decisions. Data driven insights enhance investment strategies and risk
+management.
+
+\vspace{0.4cm}
+
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.2.2 Fraud Detection: Real-Time Monitoring \& Prevention}
+\end{center}
+
+AI identifies unusual patterns in transactions, enabling real-time fraud
+detection and prevention.
+
+\vspace{0.4cm}
+
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.2.3 Customer Service Chatbots}
+\end{center}
+
+AI-driven
+chatbots provide instant customer support, improving user satisfaction
+and response times.
+
+\vspace{0.3cm}
+
+
+\includegraphics[width=\textwidth,height=6in]{../strw/image6.jpg}
+
+\begin{quote}
+\centering
+\textbf{Fig 5: AI plans by Small Businesses}
+\end{quote}
+
+
+\newpage
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{3.3 Entertainment and Creative Fields}
+\end{center}
+
+\vspace{0.4cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.3.1 AI-Generated Art: Blurring Boundaries of Creativity}
+\end{center}
+
+AI-generated art challenges traditional artistic boundaries, producing
+innovative creations.
+
+\vspace{0.2cm}
+
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.3.2
+Music and Film Recommendation}
+\end{center}
+
+\begin{figure}
+\begin{center}
+\includegraphics[width=0.6\textwidth,height=1.68403in]{../strw/image7.jpg}
+\end{center}
+\end{figure}
+
+\begin{center}
+\textbf{Fig 6: Personalised Content Recommendations by AI}
+\end{center}
+
+\vspace{0.2cm}
+
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.3.3 Video Game AI: Dynamic and Realistic Gameplay}
+\end{center}
+
+AI in gaming enhances gameplay with dynamic challenges, realistic
+opponents, and adaptive environments. AI-powered Virtual Reality
+technologies offer immersive experiences, from virtual tours to
+interactive learning.
+
+\vspace{0.2cm}
+
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.3.4 Content Creation: Automated Writing and Design}
+\end{center}
+
+AI automates content creation, from writing articles to designing visuals,
+streamlining creative processes.
+
+\includegraphics[width=\textwidth,height=2.36667in]{../strw/image8.jpg}
+\begin{quote}
+\centering
+\textbf{Fig 7: AI use by experienced Organisations}
+\end{quote}
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{3.4 Impacts and Benefits of AI Applications}
+\end{center}
+
+\vspace{0.5cm}
+
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.4.1 Enhancing Efficiency and Productivity}
+\end{center}
+
+AI streamlines operations and automates tasks, boosting efficiency and
+freeing human resources for higher-level tasks.
+
+\vspace{0.2cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.4.2 Improving Accuracy and Decision-Making}
+\end{center}
+
+AI\textquotesingle s data analysis capabilities lead to accurate
+predictions and informed decision-making, reducing errors.
+
+\vspace{0.2cm}
+
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.4.3 Enabling New Business Models and Opportunities}
+\end{center}
+
+AI-driven insights open doors to novel business models and revenue
+streams, fostering innovation
+
+\vspace{0.2cm}
+
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.4.4 Scientific Advancements}
+\end{center}
+
+Artificial Intelligence is helping a lot in Accelerating Scientific
+Researches and also helps in Discovering New Technologies all over the
+World.
+
+\vspace{0.2cm}
+
+
+\begin{center}
+\Large
+\raggedright
+\textbf{3.4.5 Improved Efficiency}
+\end{center}
+
+AI Technologies help us in saving a lot of Time on Complex and Lengthy
+Activities like Editing etc.
+
+\vspace{0.4cm}
+
+
+\begin{quote}
+\centering
+\textbf{Table 3: Benefits of AI Applications}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.3611}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.6389}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Benefit}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Description}
+\end{minipage} \\
+\midrule()
+\endhead
+Enhanced Efficiency & Automation and optimization of processes. \\
+Improved Accuracy & Reduced errors and precise decision-making. \\
+New Businesses & Creation of innovative products and services. \\
+Scientific Researh & Accelerated research and discoveries. \\
+Improved Efficiency & Helps in getting Complex jobs done easily. \\
+\bottomrule()
+\end{longtable}
+
+\begin{figure*}
+\centering
+\includegraphics[width=\textwidth, height=0.9\textheight, keepaspectratio]{../strw/image9.jpg}
+\caption{Fig 8: How Smartphone users Benefit from AI}
+\end{figure*}
+
+
+\newpage
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{Chapter 4: Ethical, Social, and Future Considerations in AI}
+\rule{\textwidth}{0.5mm}
+ \vspace{1mm}
+\end{center}
+
+\vspace{0.3cm}
+
+
+Artificial intelligence (AI) presents immense potential, but it also
+brings forth a myriad of challenges that must be addressed to ensure
+responsible and beneficial development..
+
+\includegraphics[width=\textwidth,height=3.09931in]{../strw/image10.jpg}
+
+
+\begin{center}
+\centering
+\textbf{Fig 9: Problems Faced by people in using AI}
+\end{center}
+
+\vspace{0.2cm}
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{4.1
+Ethical Challenges in AI Development:}
+\end{center}
+
+\vspace{0.2cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.1.1 Bias and Fairness in AI Algorithms}
+\end{center}
+
+AI algorithms can inadvertently perpetuate biases present in training
+data. Ensuring fairness in algorithmic outcomes is essential to prevent
+discrimination.
+
+\vspace{0.2cm}
+
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.1.2 Accountability and Transparency}
+\end{center}
+
+The opacity of certain AI models raises concerns about accountability.
+Transparent algorithms enable users to understand how decisions are
+made.
+
+\vspace{0.2cm}
+
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.1.3 Ethical Use of AI in Decision-Making}
+\end{center}
+
+AI\textquotesingle s role in high-stakes decisions, such as criminal
+justice and healthcare, necessitates ethical frameworks to prevent
+misuse.
+
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{4.2 Algorithmic Bias, Fairness, and Transparency}
+\end{center}
+
+\vspace{0.2cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.2.1 Identifying and Mitigating Bias in AI Systems}
+\end{center}
+
+Use methods to detect and rectify biases in AI models to ensure
+equitable outcomes for all groups.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.2.2 Ensuring Fairness in Decision-Making}
+\end{center}
+
+Implementing fairness-aware algorithms to prevent systemic
+discrimination and disparities.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.2.3 Transparency in AI Algorithms and Outcomes}
+\end{center}
+
+Disclosing the inner workings of AI models to instill user trust and
+ensure comprehensible results.
+
+\vspace{0.2cm}
+
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{4.3 Privacy, Data Security, Societal Implications}
+\end{center}
+
+\vspace{0.2cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.3.1 Balancing Data Utility and Privacy}
+\end{center}
+
+Leveraging data while safeguarding individuals\textquotesingle{} privacy
+rights through privacy-preserving techniques.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.3.2Addressing Privacy Concerns in AI Applications}
+\end{center}
+
+Navigating the ethical complexities of data collection, storage, and
+sharing in AI applications.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.3.3 Data Security in the Age of AI}
+\end{center}
+
+Safeguarding
+AI systems against cyber threats and ensuring the security of sensitive
+data.
+
+\begin{figure}
+\centering
+\includegraphics[width=\textwidth,height=2.25in]{../strw/image11.jpg}
+\end{figure}
+\begin{quote}
+\centering
+\textbf{Fig 10: Societal implications of AI}
+\end{quote}
+
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{4.4 Progressing toward Artificial General Intelligence (AGI)}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.4.1 Impact on Workforce and Economy}
+\end{center}
+
+AI\textquotesingle s transformative impact on employment patterns and
+the economy, and strategies for workforce transition.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.4.2 Ensuring Safe and Ethical AGI Development}
+\end{center}
+
+Safeguarding against risks and ethical dilemmas as AGI evolves.
+
+\vspace{0.3cm}
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{4.5 Future Directions and Open Questions}
+\end{center}
+
+\vspace{0.3cm}
+
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.5.1 The Road to Superintelligence:}
+\end{center}
+
+Speculations on achieving superintelligence and the ethical and
+practical challenges it presents.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.5.2 Human-AI Collaboration and Augmentation}
+\end{center}
+
+Exploring the symbiotic relationship between humans and AI, focusing on
+augmentation rather than replacement.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{4.5.3 Regulatory Frameworks for AI Development}
+\end{center}
+The
+need for international cooperation in developing AI regulations that
+balance innovation with societal well-being.
+
+\includegraphics[width=\textwidth,height=3.85in]{../strw/image12.jpg}
+\begin{center}
+\textbf{Fig 11: Responsibility for AI}
+\end{center}
+
+\newpage
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{Chapter 5: AI in Research, Industry, and Internal Workings}
+\rule{\textwidth}{0.5mm}
+ \vspace{1mm}
+\end{center}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.1 Case Studies in AI Research}
+\end{center}
+
+\vspace{0.1cm}
+
+
+Artificial intelligence (AI) is rapidly transforming the landscape of
+scientific research. Researchers across diverse fields are harnessing
+AI\textquotesingle s capabilities to extract valuable insights,
+accelerate discoveries, and tackle complex problems.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.1.1 Natural Language Processing in Healthcare Research}
+\end{center}
+
+In the realm of healthcare, AI-driven natural language processing (NLP)
+is revolutionizing patient care and medical research. NLP algorithms
+analyze vast amounts of medical literature, patient records, and
+clinical notes, enabling researchers to identify trends, discover
+potential treatments, and even predict disease outbreaks. By automating
+the extraction of relevant information from unstructured data, NLP
+empowers healthcare professionals to make informed decisions and
+contribute to medical advancements.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.1.2 Deep Learning for Autonomous Vehicles}
+\end{center}
+The
+automotive industry has witnessed a paradigm shift with the integration
+of deep learning into autonomous vehicles. Deep neural networks analyze
+sensor data, such as images and lidar scans, to navigate and make
+real-time driving decisions. These systems learn from vast datasets,
+recognizing patterns that enable vehicles to identify pedestrians,
+obstacles, and traffic signs. The advancement of deep learning is paving
+the way for safer and more efficient autonomous transportation.
+
+\begin{quote}
+\centering
+\textbf{Fig 12: Self-driving cars}
+\end{quote}
+\begin{figure}
+\centering
+\includegraphics[height=1.5in]{../strw/image13.jpg}
+\end{figure}
+
+\newpage
+\begin{center}
+\Large
+\raggedright
+\textbf{5.1.3 AI in Climate Modeling and Environmental Research}
+\end{center}
+
+Climate scientists are leveraging AI to model and predict complex
+environmental phenomena. Machine learning algorithms process climate
+data to simulate scenarios, project future climate trends, and
+understand the impact of various factors on our planet.
+AI\textquotesingle s ability to handle intricate relationships within
+large datasets enables researchers to refine climate models and provide
+more accurate forecasts.
+
+\vspace{0.2cm}
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{5.2 AI Transforming Industries}
+\end{center}
+
+\vspace{0.1cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.2.1 Retail and E-Commerce: Personalized Shopping}
+\end{center}
+
+AI-powered recommendation systems analyze user preferences and behavior
+to offer personalized product recommendations, enhancing user
+experience.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.2.2 Manufacturing and Supply Chain Optimization}
+\end{center}
+
+AI optimizes manufacturing processes by predicting equipment maintenance
+needs, minimizing downtime, and ensuring efficient supply chain
+management.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.2.3 Agriculture: Precision Farming}
+\end{center}
+
+AI-enabled
+precision agriculture utilizes sensors, drones, and data analytics to
+monitor crop health, optimize irrigation, and enhance yields.
+
+\includegraphics[width=\textwidth,height=2.5in]{../strw/image14.jpg}
+\begin{quote}
+\centering
+\textbf{Fig 13: Top 5 Industries affected by AI}
+\end{quote}
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{5.3 Understanding AI\textquotesingle s Internal Workings}
+\end{center}
+
+\vspace{0.2cm}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.3.1 Neural Networks: Basis of Deep Learning}
+\end{center}
+
+Neural networks, inspired by the human brain, form the foundation of
+deep learning. They consist of interconnected layers that process data
+and extract intricate patterns.
+
+
+\begin{quote}
+\centering
+\textbf{Table 4: Internal Components of Neural Networks}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4056}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5944}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Component}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Function}
+\end{minipage} \\
+\midrule()
+\endhead
+Input Layer & Receives input data. \\
+Hidden Layers & Process data through interconnected nodes. \\
+Activation Functions & Introduce non-linearity to the model. \\
+Weights and Biases & Adjusted during training for learning. \\
+Output Layer & Produces the model\textquotesingle s final prediction. \\
+\bottomrule()
+\end{longtable}
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.3.2 Training and Optimization: Learning from Data}
+\end{center}
+
+AI systems "learn" from large datasets through training and optimization
+processes. Algorithms adjust parameters to minimize errors and improve
+performance.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.3.3 Interpretability: Unveiling AI Decision-Making}
+\end{center}
+
+Understanding how AI reaches decisions is crucial. Techniques like
+visualization and attention mechanisms shed light on the reasoning
+behind AI outputs.
+
+\vspace{0.2cm}
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{5.4 Advancements in Financial Technology (FinTech)}
+\end{center}
+
+AI enhances decision-making, automation, and risk management:
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.4.1 AI-Powered Wealth Management and Investment Advice}
+\end{center}
+
+AI algorithms analyze financial data to provide personalized investment
+recommendations and strategies, catering to individual risk profiles.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.4.2 Robotic Process Automation in Financial Services}
+\end{center}
+
+RPA automates routine financial tasks, reducing errors and freeing human
+resources to focus on higher-value activities.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.4.3 AI in Credit Risk Assessment and Underwriting}
+\end{center}
+
+AI-driven credit scoring models leverage vast datasets to assess
+creditworthiness accurately, allowing lenders to make informed
+decisions.
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{5.5 Emerging Trends in AI}
+\end{center}
+
+The chapter gives a glimpse into the future of AI, focusing
+on trends like Explainable AI, Federated Learning, and the potential
+synergy between Quantum Computing and AI.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.5.1 Explainable AI: Bridging the Gap between AI and Human
+Understanding}
+\end{center}
+
+Explainable AI focuses on making AI decisions interpretable, allowing
+users to understand and trust the rationale behind outcomes.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.5.2 Federated Learning: Privacy-Preserving
+Models}
+\end{center}
+
+Federated learning enables training AI models across multiple devices
+while keeping data decentralized, enhancing privacy and security.
+
+\begin{center}
+\Large
+\raggedright
+\textbf{5.5.3 Quantum Computing and AI:}
+\end{center}
+
+Quantum computing holds potential for solving complex AI problems
+faster, enabling breakthroughs in fields like cryptography and
+optimization.
+
+\vspace{0.4cm}
+
+
+\begin{quote}
+\centering
+\textbf{
+Table 5: Emerging Trends in AI}
+\end{quote}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.4330}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5670}}@{}}
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Trend}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Description}
+\end{minipage} \\
+\midrule()
+\endhead
+Explainable AI & AI models designed to provide interpretable results. \\
+Federated Learning & Decentralized machine learning across multiple
+devices. \\
+Quantum Computing and AI & Exploring the synergy between quantum
+computing and AI. \\
+\bottomrule()
+\end{longtable}
+
+\vspace{0.4cm}
+\begin{center}
+\LARGE
+\raggedright
+\textbf{Section Highlight:}
+\end{center}
+This chapter explored AI\textquotesingle s pivotal role in scientific
+research and industries. It showcases AI\textquotesingle s applications
+in healthcare, autonomous vehicles, climate modeling, and its
+transformative influence on various sectors. Additionally, it delves
+into the inner workings of AI systems and highlights emerging trends in
+the field.
+
+\includegraphics[width=\textwidth,height=3in]{../strw/image15.jpg}
+\begin{center}
+\textbf{Fig 14: AI Revenue by Region}
+\end{center}
+\vspace{0.8cm}
+\includegraphics[width=\textwidth,height=3in]{../strw/image16.jpg}
+\begin{center}
+\textbf{Fig 15: AI hiring by Countries}
+\end{center}
+
+\newpage
+
+\begin{center}
+\LARGE
+\textbf{Chapter 6: Conclusion and Future Scope}
+\rule{\textwidth}{0.5mm}
+ \vspace{1mm}
+\end{center}
+
+\vspace{0.3cm}
+
+\begin{center}
+\LARGE
+\raggedright
+\protect\hypertarget{Conclusion}{}{}\textbf{6.1 Conclusion}
+\end{center}
+
+In conclusion, our exploration into the world of AI trends has unveiled
+the remarkable evolution of artificial intelligence. From its
+foundational concepts and historical milestones to its extensive
+applications across various domains, AI\textquotesingle s influence is
+profound and transformative. As we have seen, AI has the potential to
+revolutionize industries, enhance efficiency, and improve
+decision-making processes.
+
+However, the path forward is not without its challenges. Ethical
+considerations, transparency, and the responsible development of AI are
+paramount. As AI continues to integrate into our lives, addressing
+issues related to bias, accountability, and privacy becomes increasingly
+crucial. These challenges must be met with a commitment to fostering
+AI\textquotesingle s growth while safeguarding against potential
+pitfalls.
+
+\vspace{0.2cm}
+
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{6.2 Future Scope}
+\end{center}
+
+The future of AI is rich with possibilities. As we look ahead, several
+key areas emerge as promising avenues for exploration:
+
+\textbf{Ethical AI Development}: Continued research and innovation are
+needed to ensure the ethical development and deployment of AI. This
+includes addressing algorithmic bias, establishing guidelines for AI in
+sensitive applications, and promoting transparency.
+
+\textbf{AI in Healthcare}: AI\textquotesingle s role in healthcare is
+poised for expansion. Future developments may include AI-driven
+personalized treatment plans, more accurate disease predictions, and
+innovations in telemedicine.
+
+\textbf{Quantum Computing and AI}: The synergy between quantum computing
+and AI holds exciting prospects. Quantum computing could significantly
+accelerate AI training and enable the resolution of complex problems
+currently beyond classical computing capabilities.
+
+\textbf{Human-AI Collaboration}: Exploring how AI can augment human
+capabilities rather than replace them is an emerging field. Finding ways
+for humans and AI to work together symbiotically is a focus for future
+research.
+
+\textbf{AI Regulation}: The development of robust regulatory frameworks
+to guide AI\textquotesingle s growth and ensure its ethical use will be
+an ongoing endeavor.
+
+\textbf{Global Collaboration}: International cooperation in AI research
+and governance will be essential to address global challenges and ensure
+responsible AI development.
+
+As we continue to navigate the dynamic landscape of AI trends, one thing
+is clear: AI\textquotesingle s influence will persist and expand,
+shaping our future in ways we are only beginning to fathom. It is our
+collective responsibility to harness its potential for the betterment of
+society while remaining vigilant to the ethical considerations that
+accompany this transformative technology.
+
+\vspace{0.4cm}
+
+
+\begin{center}
+\LARGE
+\raggedright
+\textbf{6.3 Summary of Key Findings}
+\end{center}
+
+In this comprehensive exploration of AI technology,
+we\textquotesingle ve delved into its historical evolution,
+transformative impact on various industries, internal workings, and
+emerging trends. Let\textquotesingle s summarize the key findings:
+
+\begin{itemize}
+\item
+  AI\textquotesingle s historical journey from early visionaries to
+  contemporary deep learning and neural networks.
+\item
+  AI\textquotesingle s diverse applications, from healthcare and
+  agriculture to finance and creative fields.
+\item
+  Insights into the inner workings of AI, including neural networks and
+  optimization.
+\item
+  Advancements in FinTech driven by AI, revolutionizing wealth
+  management and credit assessment.
+\item
+  Promising emerging trends like explainable AI, federated learning, and
+  quantum computing.
+\end{itemize}
+\begin{center}
+\includegraphics[width=10cm,height=8cm]{../strw/image17.jpg}
+\end{center}
+\begin{center}
+\textbf{Fig 16: AI Estimated Market Size}
+\end{center}
+
+\newpage
+
+\begin{center}
+\LARGE
+\raggedright
+\hypertarget{references}{%
+\section{References:}\label{references}}
+\end{center}
+
+\begin{enumerate}
+\setlength\itemsep{0em} % Adjust the spacing between items
+\item Brown, A. (2018). The Impact of AI on the Financial Industry. Financial Times Press.
+\item McKinsey \& Company. (2017). The Future of Work: Jobs in the Age of Artificial Intelligence. https://www.mckinsey.com/featured-insights/future-of-work
+\item Chen, L. (2016). "Ethical Considerations in AI Development." AI Ethics Journal, 8(2), 123-136.
+\item Anderson, R. (2015). The Turing Test and Its Significance in AI History. Oxford University Press.
+\item Davis, S. (2017). AI in Entertainment: A Creative Revolution. Creative Arts Publishing.
+\item Li, X., and Wang, Y. (2019). "AI in Healthcare: Challenges and Opportunities." Health Informatics Journal, 25(4), 285-298.
+\item Future Trends Research Group. (2022). AI in Emerging Industries: A Forecast for 2030. Future Trends Publishing.
+\item Russell, S. J., and Norvig, P. (2021). Artificial Intelligence: A Modern Approach. Pearson.
+\item \url{https://www.analyticsinsight.net/}
+\item \url{https://en.wikipedia.org/wiki/Artificial_intelligence}
+\item \url{https://www.statista.com/}
+\item \url{https://www.researchgate.com/}
+\item \url{https://www.precedenceresearch.com/}
+\end{enumerate}
+
+
+\end{document}
